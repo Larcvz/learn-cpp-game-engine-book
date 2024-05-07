@@ -11,5 +11,6 @@ add_executable(main ${SOURCE_C_FILES} ${SOURCE_CPP_FILES})
 # 设置编译选项
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++2a")
-target_include_directories(main PUBLIC ./depends/include)
-target_include_directories(main PUBLIC ./src/vendor)
+include_directories(include depends/include)
+# target_include_directories(main PUBLIC ./depends/include)
+# target_include_directories(main PUBLIC ./src/vendor)
